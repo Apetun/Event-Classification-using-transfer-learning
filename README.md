@@ -21,5 +21,6 @@ Fire                                = "fire"
 Destroyed buildings                 = "destroyedbuilding"
 ```
 ## Steps Taken 
-- Data Augmentation using [Data_augmentation.py](Data_augmentation.py) on the original dataset to create a larger augmented dataset provided in the `training` folder
-- 
+- Data Augmentation using [Data_augmentation.py](Data_augmentation.py) on the original dataset to create a larger augmented dataset provided in the [training](/training) folder
+- Creating a model using Google Mobile-Net V2 as a base through transfer learning in [Model_Creation.py](Model_Creation.py) and saving it as [best_model.h5](best_model.h5)
+- Testing [best_model.h5](best_model.h5) on [testing](testing) with [Model_testing.py](Model_testing.py)
