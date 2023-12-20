@@ -27,4 +27,11 @@ for testing_file in testing_files:
     preprocessed_image = load_and_preprocess_image(testing_image_path)
     predictions = loaded_model.predict(preprocessed_image)
     predicted_label = np.argmax(predictions)
-    print(f"Image: {testing_file}, Predicted Label: {predicted_label}")
+    event_labels_dict = {
+        0:"combat",
+        1:"destroyedbuilding",
+        2:"humanitarianaid",
+        3:"militaryvehicles",
+        4:"fire",
+    }
+    print(f"Image: {testing_file}, Predicted Label: {event_labels_dict[predicted_label]}")
